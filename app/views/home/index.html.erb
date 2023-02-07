@@ -1,0 +1,62 @@
+<style>
+    #home_wrap {
+        display: flex;
+        justify-content: center;
+    }
+
+    #form_wrap {
+        width: 500px;
+        margin-top: 150px;
+    }
+
+    label {
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        color: #3d466e;
+        line-height: 22px;
+    }
+
+    input {
+        width: 100%;
+        border: 1px solid #dddddd;
+        padding: 0.5em 1em;
+        padding-top: 0.6em;
+        padding-bottom: 0.6em;
+        font-size: 16px;
+        font-weight: bold;
+        background: #fff;
+        margin: 0;
+        -webkit-appearance: none;
+        line-height: inherit;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    input:focus {
+        border-color: #3e54ff;
+    }
+
+    ul {
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    li {
+        list-style: none;
+        font-size: 16px;
+        margin-top: 3px;
+    }
+</style>
+
+<div id="home_wrap">
+    <div id="form_wrap">
+        <label for="url">Website URL:</label>
+        <input id="url" name="url" type="text">
+        <ul id="list_wrap">
+            <% @urls.each do |url| %>
+            <li><%=url.url%></li>
+            <% end %>
+        </ul>
+    </div>
+</div>
