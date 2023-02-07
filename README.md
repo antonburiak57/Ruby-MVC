@@ -1,24 +1,24 @@
-# README
+# MVC/Ruby on Rails/Postgresql/Ajax User Interface
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Features
 
-Things you may want to cover:
+- Ruby 2.7.1
+- Rails 7.0
+- Postgresql
+- Jquery
 
-* Ruby version
+## Install
 
-* System dependencies
+It's recommended to use Ruby 2.7.1.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```sh
+# install bundler if not available
+gem install bundler
+# install gem dependencies
+bundle install
+# create the postgres databases
+# update config/database.yml details if needed
+rake db:migrate
+# start server
+rails s
+```
